@@ -21,26 +21,38 @@ class SideDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.all(0.0),
         children: <Widget>[
-          UserAccountsDrawerHeader(
-            accountName: Text("Burhanuddin Rashid"),
-            accountEmail: Text("burhanrashid5253@gmail.com"),
-            otherAccountsPictures: <Widget>[
-              IconButton(
-                  icon: Icon(
-                    Icons.info,
-                    color: Colors.white,
-                    size: 36.0,
-                  ),
-                  onPressed: () async {
-                    await context.adaptiveNavigate(
-                        SCREEN.ABOUT, AboutUsScreen());
-                  })
-            ],
-            currentAccountPicture: CircleAvatar(
-              backgroundColor: Theme.of(context).accentColor,
-              backgroundImage: AssetImage("assets/profile_pic.jpg"),
+          Container(
+            color: Colors.red,
+            height: 200,
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Center(
+                  child: Text(
+                'Developed by Aviral Mishra And Shivanshu Mishra',
+                style: TextStyle(color: Colors.white),
+              )),
             ),
           ),
+          // UserAccountsDrawerHeader(
+          //   accountName: Text("Aviral Mishra"),
+          //   accountEmail: Text("Shivanshu Mishra"),
+          //   // otherAccountsPictures: <Widget>[
+          //   //   IconButton(
+          //   //       icon: Icon(
+          //   //         Icons.info,
+          //   //         color: Colors.white,
+          //   //         size: 36.0,
+          //   //       ),
+          //   //       onPressed: () async {
+          //   //         await context.adaptiveNavigate(
+          //   //             SCREEN.ABOUT, AboutUsScreen());
+          //   //       })
+          //   // ],
+          //   // currentAccountPicture: CircleAvatar(
+          //   //   backgroundColor: Theme.of(context).accentColor,
+          //   //   backgroundImage: AssetImage("assets/profile_pic.jpg"),
+          //   // ),
+          // ),
           ListTile(
               leading: Icon(Icons.inbox),
               title: Text(
